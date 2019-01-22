@@ -29,13 +29,17 @@ public class Ejemplo06ErroresSalidas {
         System.out.println("Cookie Status"+respuesta.getStatus());
         System.out.println("Cookies: "+respuesta.getCookies());
 
-        respuesta=target.path("rest/errores/1").request().accept(MediaType.TEXT_PLAIN).get();
+        respuesta=target.path("rest/errores/1").request().accept(MediaType.APPLICATION_JSON).get();
         System.out.println("Status ID: " + respuesta.getStatus());
         System.out.println("ID Entity: " + respuesta.readEntity(String.class));
 
-        respuesta=target.path("rest/errores/").request().accept(MediaType.TEXT_PLAIN).get();
+        respuesta=target.path("rest/errores/").request().accept(MediaType.APPLICATION_JSON).get();
         System.out.println("Status ID: " + respuesta.getStatus());
         System.out.println("ID Entity: " + respuesta.readEntity(String.class));
+
+
+        Integer objeto= target.path("rest/errores/1").request().accept(MediaType.APPLICATION_JSON).get(Integer.class);
+        System.out.println("ID Entity: " + objeto);
     }
 
     private static URI getBaseURI() {
