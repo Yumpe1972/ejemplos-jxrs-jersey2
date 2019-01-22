@@ -1,9 +1,11 @@
 package com.cursosdedesarrollo.app;
 
 import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 
 @XmlRootElement
-public class Ejemplo04Objeto{
+public class Ejemplo04Objeto implements Serializable {
+    private static final long serialVersionUID = 6285845014865471015L;
     private String summary;
     private String description;
 
