@@ -24,6 +24,11 @@
       <param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
       <param-value>true</param-value>
     </init-param>
+    <!-- Descomentar para manejar una App custom Ejemplo08 -->
+    <!--init-param>
+      <param-name>javax.ws.rs.Application</param-name>
+      <param-value>com.cursosdedesarrollo.app.Ejemplo08CustomApplication</param-value>
+    </init-param-->
     <load-on-startup>1</load-on-startup>
     <async-supported>true</async-supported>
   </servlet>

@@ -17,10 +17,11 @@ public class Ejemplo07Asincrono {
 
         Client client = ClientBuilder.newClient(config);
 
-        Future<Response> future1 = client.target("http://localhost:9090/rest/asincrono")
+        Future<Response> future1 =
+            client.target("http://localhost:9090/rest/asincrono")
                 .request()
-                .async().get();
-
+                .async()
+                .get();
 
         Response res = null;
         String result1 = null;

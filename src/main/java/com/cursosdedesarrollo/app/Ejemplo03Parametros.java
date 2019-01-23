@@ -13,7 +13,7 @@ public class Ejemplo03Parametros {
     @GET
     @Path("/{id}")
     @Produces(MediaType.TEXT_PLAIN)
-    public String getId(@PathParam("id") String id){
+    public Integer getId(@PathParam("id") Integer id){
         return  id;
     }
 
