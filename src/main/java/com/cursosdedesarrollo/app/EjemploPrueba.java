@@ -10,7 +10,6 @@ import javax.ws.rs.core.Response;
 public class EjemploPrueba {
         @GET
         public Response restPostHome(){
-
-            return Response.status(200).entity("I can´t belive it").build();
+            return Response.status(200).entity("I CAN NOT BELIVE IT").build();
         }
      }
