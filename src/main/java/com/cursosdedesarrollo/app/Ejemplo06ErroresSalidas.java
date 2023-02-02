@@ -14,7 +14,7 @@ public class Ejemplo06ErroresSalidas {
         String book = "Libro";
         Response.ResponseBuilder builder = Response.ok(book);
         builder.language("es")
-                .status(200)
+                .status(501)
                 .header("Parametro-Cabecera", "valor");
         return builder.build();
     }
